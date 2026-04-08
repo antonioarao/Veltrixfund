@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saques e Depósitos - Veltrix Fund 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="logo">
+    <h1>Saques e Depósitos</h1>
+    <p>Gerencie seus fundos</p>
+  </header>
+
+  <!-- Solicitar Saque -->
+  <section class="saque">
+    <h2>Solicitar Saque</h2>
+    <p>Saldo disponível: 0 Kz</p>
+
+    <form>
+      <div class="input-group">
+        <label>Valor do Saque</label>
+        <input type="number" placeholder="Digite o valor" required>
+      </div>
+
+      <div class="input-group">
+        <label>Método de Retirada</label>
+        <select required>
+          <option value="">Selecione</option>
+          <option value="banco">Banco (BAI, BIC, BFA, ATLÂNTICO)</option>
+          <option value="express">Express (até 3h)</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Número de Telefone (Express)</label>
+        <input type="text" placeholder="Digite o número">
+      </div>
+
+      <div class="input-group">
+        <label>Senha de Retirada</label>
+        <input type="password" placeholder="Digite sua senha" required>
+      </div>
+
+      <button type="submit" class="btn-gold">CONFIRMAR SAQUE</button>
+    </form>
+  </section>
+
+  <!-- Histórico de Depósitos -->
+  <section class="historico">
+    <h2>Histórico de Depósitos</h2>
+    <table>
+      <tr>
+        <th>Data</th>
+        <th>Valor</th>
+        <th>Método</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Histórico de Saques -->
+  <section class="historico">
+    <h2>Histórico de Saques</h2>
+    <table>
+      <tr>
+        <th>Data</th>
+        <th>Valor</th>
+        <th>Método</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Menu inferior -->
+  <footer class="menu">
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="convites.html">Convites</a>
+      <a href="saques.html">Saques</a>
+      <a href="sobre.html">Sobre</a>
+    </nav>
+  </footer>
+</body>
+</html>
