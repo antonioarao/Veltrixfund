@@ -1,0 +1,59 @@
+// Função para copiar link de convite
+function copiarLink() {
+  const input = document.querySelector('input[type="text"]');
+  input.select();
+  document.execCommand("copy");
+  alert("Link copiado para a área de transferência!");
+}
+
+// Função para partilhar no WhatsApp
+function partilharWhatsApp() {
+  const input = document.querySelector('input[type="text"]');
+  const link = input.value;
+  window.open(`https://wa.me/?text=${encodeURIComponent(link)}`, "_blank");
+}
+
+// Alternar tema (preto/dourado ↔ branco/azul)
+function alternarTema() {
+  const body = document.body;
+  if (body.classList.contains("tema-claro")) {
+    body.classList.remove("tema-claro");
+    body.classList.add("tema-escuro");
+  } else {
+    body.classList.remove("tema-escuro");
+    body.classList.add("tema-claro");
+  }
+}
+
+// Validação simples de formulário de login/registro
+function validarFormulario(event) {
+  event.preventDefault();
+  const inputs = document.querySelectorAll("input[required]");
+  let valido = true;
+
+  inputs.forEach(input => {
+    if (!input.value.trim()) {
+      valido = false;
+      input.style.border = "2px solid red";
+    } else {
+      input.style.border = "1px solid #ccc";
+    }
+  });
+
+  if (valido) {
+    alert("Formulário enviado com sucesso!");
+  } else {
+    alert("Por favor, preencha todos os campos obrigatórios.");
+  }
+}
+
+// Adicionar eventos aos botões
+document.addEventListener("DOMContentLoaded", () => {
+  const btnCopiar = document.querySelector(".btn-gold:nth-of-type(1)");
+  const btnWhatsApp = document.querySelector(".btn-gold:nth-of-type(2)");
+  const forms = document.querySelectorAll("form");
+
+  if (btnCopiar) btnCopiar.addEventListener("click", copiarLink);
+  if (btnWhatsApp) btnWhatsApp.addEventListener("click", partilharWhatsApp);
+  forms.forEach(form => form.addEventListener("submit", validarFormulario));
+});
